@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="POtiRoPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>entidades.Geo</class>
+    <class>entidades.Cliente</class>
+    <class>entidades.Distancia</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/maps"/>
+      <property name="javax.persistence.jdbc.user" value="postgres"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="posgres"/>
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="ControleViagensPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>entidades.Caminhao</class>
+    <class>entidades.Regiao</class>
+    <class>entidades.Viagem</class>
+    <class>entidades.Motorista</class>
+    <class>entidades.Custocaminhao</class>
+    <class>entidades.ContabilidadeMat</class>
+    <class>entidades.TitulosContasPagar</class>
+    <class>entidades.ContasMat</class>
+    <properties> controlecargas
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://192.168.0.83:5432/controlecargas"/>
+			<property name="javax.persistence.jdbc.user" value="postgres"/>
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+			<property name="javax.persistence.jdbc.password" value="asdfzxcv"/>
+		</properties>
+  </persistence-unit>
+</persistence>

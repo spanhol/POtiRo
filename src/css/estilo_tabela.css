@@ -1,0 +1,19 @@
+.normal {
+
+}
+
+.fundoverde {
+	-fx-background-color: rgba(0, 200, 0, 0.2);
+}
+
+fundovermelho {
+	-fx-background-color: rgba(200, 0, 0, 0.2);
+}
+
+.textovermelho {
+	-fx-text-fill: red;
+}
+
+.fundocinza {
+	-fx-background-color: rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,63 @@
+.area {
+	-fx-padding: 10 0 0 0;
+	-fx-alignment: TOP_LEFT;
+}
+
+.campo {
+    -fx-padding: 0;
+    -fx-spacing: 2;
+	-fx-alignment: BASELINE_RIGHT;
+}
+
+.node_right {
+	-fx-text-alignment: right;
+	-fx-alignment: BASELINE_RIGHT; 
+}
+
+.node {
+}
+
+.tf {
+    -fx-padding: 0;
+    -fx-spacing: 2;
+	-fx-alignment: BASELINE_RIGHT;
+}
+
+.biglabel {
+    -fx-padding: 0 0 5 25;
+	-fx-alignment: TOP_LEFT;
+}
+
+.lb {
+    -fx-padding: 0;
+    -fx-spacing: 3;
+	-fx-alignment: BASELINE_RIGHT;
+}
+
+.lbfor {
+    -fx-padding: 0;
+    -fx-spacing: 3;
+	-fx-alignment: BASELINE_RIGHT;
+}
+
+.lbbox {
+    -fx-padding: 0;
+    -fx-spacing: 3;
+	-fx-alignment: BASELINE_LEFT;
+}
+.botoes {
+    -fx-padding: 3 2 2 2;
+    -fx-spacing: 3;
+	-fx-alignment: BASELINE_RIGHT;
+}
+.erro {
+	-fx-effect: dropshadow( three-pass-box , rgba(255,0,0,0.8) , 8, 0.0 , 0 , 0 );
+}
+
+.auto {
+	-fx-effect: dropshadow( three-pass-box , rgba(0,0,255,0.8) , 8, 0.0 , 0 , 0 );
+}
+
+.dif {
+	-fx-effect: dropshadow( three-pass-box , rgba(0,128,128,0.6) , 8, 0.0 , 0 , 0 );
+}
