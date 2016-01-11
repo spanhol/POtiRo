@@ -69,15 +69,14 @@ public class MainScene extends Scene {
 		webView.setMinSize(x, y);
 		WebEngine pagina = webView.getEngine();
 
-		GeoService.batchGeo(false);
-
-//		GeoDao dao = new GeoDao();
+//		GeoService.batchGeo(false);
+		GeoDao dao = new GeoDao();
 //		GeoWrapper origem = dao.getInstance(new GeoWrapper(new Geo("ChIJ-cKmDq328JQRXYzuA52tmxk")));
 //		Ampére - -25.9167035,-53.47472990000001
-//		LinkedList<GeoWrapper> entregas = new LinkedList<>();
+		LinkedList<GeoWrapper> entregas = new LinkedList<>();
 //		entregas.add(origem);
 //		entregas.add(dao.getInstance(new GeoWrapper(new Geo("ChIJj-o7RpBH8JQR0kf8cBFK16E"))));
-//
+
 //		entregas.add(dao.getInstance(new GeoWrapper(new Geo("ChIJJ04NtfX66pQRkZnRVFGbOdA"))));
 //		entregas.add(dao.getInstance(new GeoWrapper(new Geo("ChIJJasuwWmp4pQRYSW-TLbVbYQ"))));
 //		entregas.add(dao.getInstance(new GeoWrapper(new Geo("ChIJjb_Vp9Vy8JQR5Utnb_w2_Fo"))));
@@ -97,18 +96,7 @@ public class MainScene extends Scene {
 //		entregas.add(dao.getInstance(new GeoWrapper(new Geo("ChIJ73BOuPh335QR4eh5gI_jXFk"))));
 ////Jaraguá do Sul - -26.4896863,-49.0315087
 //		entregas.add(dao.getInstance(new GeoWrapper(new Geo("ChIJ6Qn8Y-W_3pQRPFgs5Oj5zpI"))));
-//		Ponto res = aestrela(origem, dao.getInstance(new GeoWrapper(new Geo("ChIJ79zqVCXI45QRg2nZd86s3A4"))), entregas);
-//		Ponto res = blob(origem, entregas);
-//		Ponto res = cristofides(origem, entregas);
-//		System.out.println("--------------------caminho-----------------");
-//		Ponto atual = res;
-//		System.out.println(atual);
-//		LinkedList<GeoWrapper> ways = new LinkedList<>();
-//		while (atual != null) {
-//			ways.add(atual.getGeo());
-//			atual = atual.getCaminho();
-//		}
-//		entregas.add(origem);
+		System.out.println("--------------------caminho-----------------");
 //		System.out.println(origem.getCidade() + " - " + origem.toLatLng());
 //		entregas.stream().forEach((e) -> {
 //			System.out.println(e.getCidade() + " - " + e.toLatLng());
@@ -125,6 +113,43 @@ public class MainScene extends Scene {
 //			ways.add(gat.getGeo());
 //			gat = gat.getVerticesSaindo().get(0).getB();
 //		}
+
+		//rota teste
+		//		 1216 - 104826 - cacado - sc - ChIJTdBIrfm15pQRdLR5IB_EVTc;-26.7818639;-51.0198855
+		entregas.add(dao.getInstance(new GeoWrapper(new Geo("ChIJTdBIrfm15pQRdLR5IB_EVTc"))));
+		//		 44 - 105312 - vidal ramos - sc - ChIJ73BOuPh335QR4eh5gI_jXFk;-27.3699127;-49.3450112
+		entregas.add(dao.getInstance(new GeoWrapper(new Geo("ChIJ73BOuPh335QR4eh5gI_jXFk"))));
+		//		 1050 - 105502 - presidente getulio - sc - "ChIJqU334Xu035QRNhX6gDJXMvY";-27.0675686;-49.7115614
+		entregas.add(dao.getInstance(new GeoWrapper(new Geo("ChIJqU334Xu035QRNhX6gDJXMvY"))));
+		//		 56 - 105755 - indaial - sc - ElVSLiBNYWwuIEZsb3JpYW5vIFBlaXhvdG8sIDIxOTEgLSBFc3RyYWRhcyBkYXMgQXJlaWFzLCBJbmRhaWFsIC0gU0MsIDg5MTMwLTAwMCwgQnJhc2ls;-26.9111265;-49.2224019
+		entregas.add(dao.getInstance(new GeoWrapper(new Geo("ElVSLiBNYWwuIEZsb3JpYW5vIFBlaXhvdG8sIDIxOTEgLSBFc3RyYWRhcyBkYXMgQXJlaWFzLCBJbmRhaWFsIC0gU0MsIDg5MTMwLTAwMCwgQnJhc2ls"))));
+		entregas.add(dao.getInstance(new GeoWrapper(new Geo("EjlSLiBTZXRlIGRlIFNldGVtYnJvLCAxMDY5IC0gQ2VudHJvLCBCbHVtZW5hdSAtIFNDLCBCcmFzaWw"))));
+		//		 122 - 105466 - blumenau - sc - EjlSLiBTZXRlIGRlIFNldGVtYnJvLCAxMDY5IC0gQ2VudHJvLCBCbHVtZW5hdSAtIFNDLCBCcmFzaWw;-26.9211784;-49.0670123
+		entregas.add(dao.getInstance(new GeoWrapper(new Geo("EjxSLiBQYXVsbyBNb3JpdHosIDY2IC0gUHJpbWVpcm8gZGUgTWFpbywgQnJ1c3F1ZSAtIFNDLCBCcmFzaWw"))));
+		//		 46 - 105730 - brusque - sc - EjxSLiBQYXVsbyBNb3JpdHosIDY2IC0gUHJpbWVpcm8gZGUgTWFpbywgQnJ1c3F1ZSAtIFNDLCBCcmFzaWw;-27.1142985;-48.9106029
+		entregas.add(dao.getInstance(new GeoWrapper(new Geo("ChIJZw5vXYZH35QRMJrqMrJHps8"))));
+		//		 50 - 105330 - brunsque -sc - ChIJZw5vXYZH35QRMJrqMrJHps8;-27.0850008;-48.9122026
+		entregas.add(dao.getInstance(new GeoWrapper(new Geo("ChIJDdKmEvTL2JQR-1Co20COU9M"))));
+		//		 851 - 105643 - itajai - sc - ChIJDdKmEvTL2JQR-1Co20COU9M;-26.9169842;-48.6551224
+		entregas.add(dao.getInstance(new GeoWrapper(new Geo("ElFSdWEgRXN0w6lmYW5vIEpvc8OpIFZhbm9sbGksIDEzODkgLSBTw6NvIFZpY2VudGUsIEl0YWphw60gLSBTQywgODgzMDktMjAxLCBCcmFzaWw"))));
+		//		 138 - 105578 - itajai - sc - ElFSdWEgRXN0w6lmYW5vIEpvc8OpIFZhbm9sbGksIDEzODkgLSBTw6NvIFZpY2VudGUsIEl0YWphw60gLSBTQywgODgzMDktMjAxLCBCcmFzaWw;-26.9053344;-48.6887699
+		entregas.add(dao.getInstance(new GeoWrapper(new Geo("ChIJReqxfG2V3pQRrmRDPcmDYIE"))));
+		//		 142 - 105332 - jaragua do sul - sc - ChIJReqxfG2V3pQRrmRDPcmDYIE;-26.4817404;-49.0595906
+		entregas.add(dao.getInstance(new GeoWrapper(new Geo("EjVSLiBUdWl1dGksIDIxMDggLSBBdmVudHVyZWlybywgSm9pbnZpbGxlIC0gU0MsIEJyYXNpbA"))));
+		//		 133 - 105569 - joinville - cs - EjVSLiBUdWl1dGksIDIxMDggLSBBdmVudHVyZWlybywgSm9pbnZpbGxlIC0gU0MsIEJyYXNpbA;-26.2518875;-48.8196487
+		entregas.add(dao.getInstance(new GeoWrapper(new Geo("EkRSdWEgSW5hbWLDuiwgMjg5OCAtIENvc3RhIGUgU2lsdmEsIEpvaW52aWxsZSAtIFNDLCA4OTIyMC0wMDEsIEJyYXNpbA"))));
+		//		 540 - 105499 - curitiba - pr - ChIJ-Xg_mKbk3JQRtEFUGnSu_tQ;-25.4788028;-49.2796352
+		entregas.add(dao.getInstance(new GeoWrapper(new Geo("ChIJ-Xg_mKbk3JQRtEFUGnSu_tQ"))));
+		//		 1237 - 105659 - curitiba - pr - ChIJOy37N8bl3JQRs6qmsiShfl4;-25.414579;-49.2322464
+		entregas.add(dao.getInstance(new GeoWrapper(new Geo("ChIJOy37N8bl3JQRs6qmsiShfl4"))));
+		//		 1285 - 105612 - curitiba - pr - ChIJYWicQk7j3JQR5zGEg58P8f0;-25.4915302;-49.2960786
+		entregas.add(dao.getInstance(new GeoWrapper(new Geo("ChIJYWicQk7j3JQR5zGEg58P8f0"))));
+		//		 887 - 105562 - curitiba - pr - ChIJcdkDqWfm3JQRVndaIh13sg8;-25.3816696;-49.2358266
+		entregas.add(dao.getInstance(new GeoWrapper(new Geo("ChIJcdkDqWfm3JQRVndaIh13sg8"))));
+		//		 562 - 104731 - canoinhas - sc - ChIJN-LGUH4S55QRs7e5pN2qdlQ;-26.1778874;-50.3916793
+		entregas.add(dao.getInstance(new GeoWrapper(new Geo("ChIJN-LGUH4S55QRs7e5pN2qdlQ"))));
+
+		//fim rota teste
 //		List<Vertice> christofides = Christofides.run(entregas);
 //		System.out.println("--------------------christofides-----------------");
 //		System.out.println(christofides);
@@ -133,12 +158,16 @@ public class MainScene extends Scene {
 //		christofides.stream().forEach((c) -> {
 //			ways.add(c.getA().getGeo());
 //		});
+		List<GeoWrapper> ways = new LinkedList<>();
+		entregas.stream().forEach((c) -> {
+			ways.add(c);
+		});
 //		String htm = setWaypoints(origem, ways, true);
-//		System.out.println("---------------------ways------------------");
-//		System.out.println(ways);
-//		String htm = setMultiRotas(ways);
-//		pagina.loadContent(htm);
-//		hbox.getChildren().add(webView);
+		System.out.println("---------------------ways------------------");
+		System.out.println(ways);
+		String htm = setMultiRotas(ways);
+		pagina.loadContent(htm);
+		hbox.getChildren().add(webView);
 		main.getChildren().add(hbox);
 
 //		try {
